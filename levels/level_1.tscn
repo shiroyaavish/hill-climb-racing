@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfcx8tcrk0r12"]
+
+[ext_resource type="PackedScene" uid="uid://dre2bcxmgs4f2" path="res://scences/player.tscn" id="1_vn7o3"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(-460, -48)
+polygon = PackedVector2Array(-2413, -1543, -172, 18, 1925, -65, 2271, -18, 5215, -936, 9350, -1615, 11674, -2771, 19552, -2914, 35499, -1365, 44163, -2854, 69907, -1472, 71852, -1903, 75272, -2810, 79096, -2819, 82623, -1174, 90633, -1090, 96043, -18, 96020, 2402, -3545, 2104, -3593, -1531)
+
+[node name="Player" parent="StaticBody2D" instance=ExtResource("1_vn7o3")]
+position = Vector2(-1680, -1695)
+
+[node name="Camera2D" type="Camera2D" parent="StaticBody2D/Player"]
+position = Vector2(-103, 7)
+drag_horizontal_enabled = true
+editor_draw_drag_margin = true
